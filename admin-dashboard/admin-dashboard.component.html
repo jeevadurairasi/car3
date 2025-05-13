@@ -1,0 +1,24 @@
+<div class="dashboard-container">
+  <h1 class="dashboard-header">Admin Dashboard</h1>
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Username</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let admin of admins; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ admin.username }}</td>
+        <td>
+          <button class="edit-button">Edit</button>
+          <button class="delete-button" (click)="deleteAdmin(admin.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
